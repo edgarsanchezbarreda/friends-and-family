@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Fragment, useState } from 'react';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
 import {
@@ -10,12 +11,7 @@ import {
   UsersIcon,
   HeartIcon,
 } from '@heroicons/react/24/outline';
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-  RectangleGroupIcon,
-} from '@heroicons/react/20/solid';
+import { ChevronDownIcon, PhoneIcon } from '@heroicons/react/20/solid';
 
 const services = [
   {
@@ -60,15 +56,17 @@ export default function Header() {
     // <header className='fixed w-full isolate z-10 bg-white'>
     <header className='relative isolate z-10 bg-transparent drop-shadow-'>
       <nav
-        className='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8'
+        className='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 '
         aria-label='Global'
       >
         <div className='flex lg:flex-1'>
+          {/* HERE */}
           <a
             href='/'
             className='-m-1.5 p-1.5'
           >
             <span className='sr-only'>Your Company</span>
+
             <img
               className='h-8 w-auto'
               src='https://tailwindui.com/img/logos/mark.svg?color=blue&shade=600'
@@ -189,6 +187,9 @@ export default function Header() {
           </a>
         </div>
       </nav>
+
+      {/* Mobile Nav */}
+
       <Dialog
         as='div'
         className='lg:hidden'
@@ -200,7 +201,7 @@ export default function Header() {
           <div className='flex items-center justify-between'>
             <a
               href='#'
-              className='-m-1.5 p-1.5'
+              className='-m-1.5 p-1.5  '
             >
               <span className='sr-only'>Your Company</span>
               <img
@@ -211,7 +212,7 @@ export default function Header() {
             </a>
             <button
               type='button'
-              className='-m-2.5 rounded-md p-2.5 text-gray-700 hover:bg-gray-100 transition'
+              className='-m-4.5 rounded-md p-2.5 text-gray-700 hover:bg-gray-100 transition'
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className='sr-only'>Close menu</span>

@@ -19,7 +19,8 @@ export default function Hero() {
                 Our caregivers offer unwavering support to ensure that your
                 loved one receives the comfort they need and deserve. With a
                 focus on professionalism and dependability, we provide
-                high-quality personal care services.
+                high-quality personal care services to the greater Los Angeles
+                and Orange County areas.
               </p>
               <div className='mt-10 flex items-center gap-x-6'>
                 <a
@@ -30,9 +31,15 @@ export default function Hero() {
                 </a>
                 <a
                   href='#'
-                  className='text-sm rounded-md font-semibold px-6 py-4 leading-6 text-gray-900  hover:bg-gray-100 transition'
+                  className='group text-sm rounded-md font-semibold px-6 py-4 leading-6 text-gray-900  hover:bg-gray-200 transition '
                 >
-                  Explore Our Services <span aria-hidden='true'>→</span>
+                  Explore Our Services{' '}
+                  <span
+                    className=''
+                    aria-hidden='true'
+                  >
+                    →
+                  </span>
                 </a>
               </div>
             </div>

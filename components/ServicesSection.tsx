@@ -35,7 +35,7 @@ export default function ServicesSection() {
   return (
     <div className='bg-blue-700'>
       <div className='mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:max-w-7xl lg:px-8 lg:py-40'>
-        <h2 className='text-4xl font-bold tracking-tight text-white'>
+        <h2 className='text-4xl font-bold text-white font-display'>
           Our Services
         </h2>
         <p className='mt-6 mb-20 max-w-3xl text-lg leading-8 text-blue-100'>
@@ -49,7 +49,7 @@ export default function ServicesSection() {
           {features.map((feature) => (
             <a
               href=''
-              className='flex flex-col justify-between rounded-md p-4 hover:bg-blue-600 transition'
+              className='flex flex-col justify-between rounded-md p-4 hover:bg-blue-600 hover:shadow-lg group transition'
               key={feature.name}
             >
               <div>
@@ -71,8 +71,14 @@ export default function ServicesSection() {
                 </div>
               </div>
               <div className='mt-6 text-white'>
-                <p className='text-sm font-semibold leading-6'>
-                  Learn more <span aria-hidden='true'>→</span>
+                <p className='text-sm font-semibold leading-6 '>
+                  Learn more{' '}
+                  <span
+                    className='group-hover:ml-2'
+                    aria-hidden='true'
+                  >
+                    →
+                  </span>
                 </p>
               </div>
             </a>

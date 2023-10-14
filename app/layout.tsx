@@ -3,6 +3,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Public_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -35,7 +37,11 @@ export default function RootLayout({
         gilroy.variable
       )}
     >
-      <body className='flex h-full flex-col'>{children}</body>
+      <body className='flex h-full flex-col'>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
